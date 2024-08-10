@@ -1,0 +1,49 @@
+.process-table-container {
+  outline: lightgray solid 1px;
+  overflow: auto;
+
+  table.process-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid lightgray;
+
+    tbody tr {
+      &:nth-child(even) {
+        background-color: lightgray;
+      }
+      &:hover, &.selected {
+        background: aliceblue;
+      }
+    }
+
+    tr {
+      border-bottom: 1px solid lightgray;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .col-checkbox {
+      width: 5%;
+    }
+
+    .col-name {
+      width: 20%;
+    }
+
+    .col-device {
+      width: 15%;
+    }
+
+    .col-path {
+      width: 40%;
+    }
+
+    .col-status {
+      width: 20%;
+      text-transform: capitalize;
+    }
+  }
+}

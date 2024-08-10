@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { processes } from "./data";
+import {ProcessFlexTable, ProcessTable} from "./components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+			<nav className="app-nav">
+				DEMO PROCESS TABLE
+			</nav>
+
+			<div className="app-content">
+				<h1>HTML TABLE</h1>
+				<ProcessTable data={processes} />
+				<div style={{height: "50px"}}></div>
+				<h1>FLEX</h1>
+				<ProcessFlexTable data={processes} />
+			</div>
     </div>
   );
 }

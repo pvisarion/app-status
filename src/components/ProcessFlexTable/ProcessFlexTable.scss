@@ -1,0 +1,51 @@
+.process-flex-container {
+  outline: lightgray solid 1px;
+  overflow: auto;
+
+  .process-table {
+    min-width: 1000px;
+
+    .table-body .process-row {
+      &:nth-child(even) {
+        background-color: lightgray;
+      }
+      &:hover, &.selected {
+        background: aliceblue;
+      }
+    }
+
+    .process-row {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      border-bottom: 1px solid lightgray;
+
+      &.table-header {
+        font-weight: bold;
+        border-top: 1px solid lightgray;
+      }
+
+      .checkbox-col {
+        width: 5%;
+      }
+
+      .name-col {
+        width: 20%;
+      }
+
+      .device-col {
+        width: 15%;
+      }
+
+      .path-col {
+        width: 40%;
+      }
+
+      .status-col {
+        width: 20%;
+        text-transform: capitalize;
+      }
+    }
+
+  }
+}
